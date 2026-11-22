@@ -1,0 +1,29 @@
+<div class="page theme--certify">
+  <app-site-header subscript="Certify" />
+
+  <main class="content certify-content">
+    <div class="wrap">
+      <header class="section-head">
+        <h1>Certification Programs</h1>
+        <p>Explore our planned certification programs. Registrations open soon.</p>
+      </header>
+
+      <div class="category-heading">
+        <h2>Technology &amp; AI</h2>
+        <span class="category-heading__count">8 programs</span>
+      </div>
+
+      <section class="cert-grid" aria-label="Certification programs">
+        @for (program of programs; track program.no) {
+          <article class="tile cert-card accent--indigo">
+            <span class="cert-card__no">{{ program.no }}</span>
+            <h2 class="cert-card__title">{{ program.title }}</h2>
+            <button class="register-btn" type="button" disabled>Register</button>
+          </article>
+        }
+      </section>
+    </div>
+
+    <app-contact description="Questions about a program, a lab or a partnership? We would love to hear from you." />
+  </main>
+</div>
